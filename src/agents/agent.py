@@ -15,7 +15,6 @@ from google.adk.tools.mcp_tool.mcp_session_manager import StdioConnectionParams
 from google.adk.tools.tool_context import ToolContext
 from mcp import StdioServerParameters
 
-from tools import geoglows_tools
 
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -284,7 +283,6 @@ geoglows_data_agent = LlmAgent(
             )
         )
     ],
-    # tools = geoglows_tools.tool_list,
     output_key="streamflow_out",
     output_schema=GeoglowsAgentOutput
 )
